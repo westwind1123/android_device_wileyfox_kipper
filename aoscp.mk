@@ -1,5 +1,4 @@
-# Copyright (C) 2014 The CyanogenMod Project
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2017 The Pure Nexus Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,29 +12,36 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, device/wileyfox/marmite/full_marmite.mk)
+# Screen
+TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_LENGTH := 1920
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/nitrogen/products/common.mk)
+$(call inherit-product, device/wileyfox/kipper/aoscp_kipper.mk)
+
+# Inherit some common AOSCP stuff.
+$(call inherit-product, vendor/aoscp/configs/common.mk)
+
+# Inherit telephony stuff
+$(call inherit-product, vendor/aoscp/configs/telephony.mk)
 
 # Must define platform variant before including any common things
-TARGET_BOARD_PLATFORM_VARIANT := msm8937
+TARGET_BOARD_PLATFORM_VARIANT := msm8939
 
-PRODUCT_NAME := nitrogen_marmite
+PRODUCT_NAME := aoscp_kipper
 BOARD_VENDOR := wileyfox
-PRODUCT_DEVICE := marmite
+PRODUCT_DEVICE := kipper
 
 PRODUCT_GMS_CLIENTID_BASE := android-wileyfox
 
 PRODUCT_MANUFACTURER := Wileyfox
+PRODUCT_MODEL := Storm
 
 PRODUCT_BRAND := Wileyfox
 TARGET_VENDOR := wileyfox
-TARGET_VENDOR_PRODUCT_NAME := Swift2
-TARGET_VENDOR_DEVICE_NAME := marmite
-
+TARGET_VENDOR_PRODUCT_NAME := Storm
+TARGET_VENDOR_DEVICE_NAME := kipper
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT=Wileyfox/Storm/kipper:7.1.1/N6F27C/83dbe1d738:user/releas$
-    PRIVATE_BUILD_DESC="kipper-user 7.1.1 N6F27C 83dbe1d738 release-keys"
+ BUILD_FINGERPRINT=Wileyfox/Storm/kipper:7.1.1/N6F27C/83dbe1d738:user/release-keys \
+ PRIVATE_BUILD_DESC="kipper-user 7.1.1 N6F27C 83dbe1d738 release-keys"
 

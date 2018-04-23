@@ -1,1 +1,1 @@
-add_lunch_combo nitrogen_kipper-userdebug
+add_lunch_combo aoscp_kipper-userdebug

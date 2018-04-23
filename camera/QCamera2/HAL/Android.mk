@@ -50,7 +50,6 @@ endif
 LOCAL_C_INCLUDES := \
         $(LOCAL_PATH)/../stack/common \
         frameworks/native/include \
-        frameworks/native/libs/nativewindow/include/ \
         frameworks/native/include/media/openmax \
         $(call project-path-for,qcom-display)/libgralloc \
         $(call project-path-for,qcom-display)/libqdutils \

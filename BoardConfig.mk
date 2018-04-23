@@ -21,5 +21,3 @@ include device/wileyfox/kipper/board/*.mk
 
 # Inherit from proprietary files
 include vendor/wileyfox/kipper/BoardConfigVendor.mk
-TARGET_RIL_VARIANT := caf
-BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
